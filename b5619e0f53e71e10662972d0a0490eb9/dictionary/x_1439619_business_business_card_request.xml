@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b6715ec7532b1e10662972d0a0490e86" extends="task" label="Business Card Request" max_length="40" name="x_1439619_business_business_card_request" type="collection"/>
+</database>
