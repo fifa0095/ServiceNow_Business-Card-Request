@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="log" section_id="1f28fe9b53231210662972d0a0490e8c" sys_domain="global" table="x_1439619_business_business_card_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-11 16:03:34</sys_created_on>
+            <sys_id>b728fe9b53231210662972d0a0490ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="log" display_value="log" name="x_1439619_business_business_card_request" sys_domain="global" view="Default view">1f28fe9b53231210662972d0a0490e8c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-11 16:03:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-11 16:03:34</sys_created_on>
+            <sys_id>3f28fe9b53231210662972d0a0490ecc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="log" display_value="log" name="x_1439619_business_business_card_request" sys_domain="global" view="Default view">1f28fe9b53231210662972d0a0490e8c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-11 16:03:34</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>log</caption>
+            <header>false</header>
+            <name>x_1439619_business_business_card_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-11 16:03:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1f28fe9b53231210662972d0a0490e8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1439619_business_business_card_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+            <sys_update_name>sys_ui_section_1f28fe9b53231210662972d0a0490e8c</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-11 16:03:32</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

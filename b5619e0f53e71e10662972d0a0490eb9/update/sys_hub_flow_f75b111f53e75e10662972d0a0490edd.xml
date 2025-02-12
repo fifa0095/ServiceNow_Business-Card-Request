@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=79951000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>business_card_approval_flow</internal_name>
+        <label_cache>[{"name":"df1aeb88-679c-45be-b218-4c8a328efa41.approval_state","label":"5 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b3a78e20-47b0-48cf-a4f6-b3ddcda9482f":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record.state","label":"1 - Update Record➛Business Card Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1439619_business_business_card_request","column_name":"state","choices":[{"label":"Pending","used":false,"image":"","reference":false,"rawLabel":"Pending","selected":false,"missing":false,"value":"-5","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Open","used":false,"image":"","reference":false,"rawLabel":"Open","selected":false,"missing":false,"value":"1","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"rawLabel":"Awaiting Approval","selected":false,"missing":false,"value":"2","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Approved","used":false,"image":"","reference":false,"rawLabel":"Approved","selected":false,"missing":false,"value":"3","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Reject","used":false,"image":"","reference":false,"rawLabel":"Reject","selected":false,"missing":false,"value":"4","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}}],"usedInstances":{}},{"name":"Created_1.current.quantity","label":"Trigger - Record Created➛Business Card Record➛Quantity","reference":"","reference_display":"Quantity","type":"choice","base_type":"choice","parent_table_name":"x_1439619_business_business_card_request","column_name":"quantity","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"1","used":false,"image":"","reference":false,"rawLabel":"1","selected":false,"missing":false,"value":"1","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"2","used":false,"image":"","reference":false,"rawLabel":"2","selected":false,"missing":false,"value":"2","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"3","used":false,"image":"","reference":false,"rawLabel":"3","selected":false,"missing":false,"value":"3","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"4","used":false,"image":"","reference":false,"rawLabel":"4","selected":false,"missing":false,"value":"4","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"5","used":false,"image":"","reference":false,"rawLabel":"5","selected":false,"missing":false,"value":"5","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}}],"usedInstances":{"950ef5ae-7aed-4126-aaf9-d539ad40f6f0":["condition"],"2641e8b5-ae33-469c-b68e-d18f498cb46d":["condition"]}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record","label":"1 - Update Record➛Business Card Record","reference":"x_1439619_business_business_card_request","reference_display":"Business Card","type":"reference","base_type":"reference","usedInstances":{"1a3d094a-99e0-4f2f-b518-6ca317a08e49":["record"],"50941cd7-88a7-464b-9d65-285d16a892e8":["condition"],"dcdb076b-69a1-47b4-8314-65061a1ca92e":["record"],"1535bfaf-55ef-4db3-b119-ecf678f6b4c7":["record"],"d6b44c4b-96ac-41b2-b402-db76c0219d5b":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record.u_reference_1.manager","label":"1 - Update Record➛Business Card Record➛Request for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"40dc826a-2e4f-4271-8d92-095553a4d5c3":["approval_conditions"],"df1aeb88-679c-45be-b218-4c8a328efa41":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Business Card Record","reference":"x_1439619_business_business_card_request","reference_display":"Business Card","type":"reference","base_type":"reference","usedInstances":{"60f05c18-95f7-45f2-a5b2-6a4631cbacea":["record"],"40dc826a-2e4f-4271-8d92-095553a4d5c3":["record"],"17cac9b1-bdec-49ae-91b6-ae5873035112":["record"],"df1aeb88-679c-45be-b218-4c8a328efa41":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>cb5c0eaf53235210662972d0a0490e9e</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Business Card Approval Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>635c4eaf53235210662972d0a0490e06</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 09:18:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f75b111f53e75e10662972d0a0490edd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Business Card Approval Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name>sys_hub_flow_f75b111f53e75e10662972d0a0490edd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:37</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1439619_business_business_card_request">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>635c4eaf53235210662972d0a0490e06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:37</sys_updated_on>
+        <table>x_1439619_business_business_card_request</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>f75b111f53e75e10662972d0a0490edd</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:37</sys_created_on>
+        <sys_id>ef5c4eaf53235210662972d0a0490e06</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:37</sys_updated_on>
+        <trigger display_value="">635c4eaf53235210662972d0a0490e06</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f75b111f53e75e10662972d0a0490edd^sys_idNOT INef5c4eaf53235210662972d0a0490e06"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f75b111f53e75e10662972d0a0490edd^sys_idNOT INff5b111f53e75e10662972d0a0490edf"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f75b111f53e75e10662972d0a0490edd</id>
+        <name>Business Card Approval Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 09:18:03</sys_created_on>
+        <sys_id>ff5b111f53e75e10662972d0a0490edf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 09:18:03</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ff5b111f53e75e10662972d0a0490edf"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f75b111f53e75e10662972d0a0490edd^sys_idNOT IN01a2fed353231210662972d0a0490ec2,68a2fad353231210662972d0a0490e57"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</model>
+        <model_id>f75b111f53e75e10662972d0a0490edd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f75b111f53e75e10662972d0a0490edd</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:20</sys_created_on>
+        <sys_id>01a2fed353231210662972d0a0490ec2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 15:39:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=01a2fed353231210662972d0a0490ec2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</model>
+        <model_id>f75b111f53e75e10662972d0a0490edd</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_f75b111f53e75e10662972d0a0490edd</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:18</sys_created_on>
+        <sys_id>68a2fad353231210662972d0a0490e57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 15:39:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=68a2fad353231210662972d0a0490e57"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f75b111f53e75e10662972d0a0490edd^sys_idNOT INd5a2321753231210662972d0a0490e18"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:21</sys_created_on>
+        <sys_id>d5a2321753231210662972d0a0490e18</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:03:41</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS5W3XyaIBthvU8bYPQSpQImkTpSmvRCnxLvLvHepmWRfHjpWt8xJEJMU5c3TmDOn7HzpHHuH6pT5HHif6QGdCklAgPt+sCQxLNewKtFJzKyQwkkG40S9lGJOBTsNgNSerNUcSFlPEIxgMQkxC/dIc6AniMbnbRDcYdoL3023yPfV8Gp6fXHNoO2PTcb04YoJE0fYfH4XYDcm3mEQSXsEsgmCbv/I3P+bLtCksg2l/yTgOidAv7x8G+hqFEFAqMD9qU0wh8qmPHIsYvm3almUY1sXQ9Ma2Z1rYRsQwYMM6O7UMZAtJ2/TJkyQCE1wy0+AvJAjfCr4pVyyB/oyrFXqK2HfY/cJQ6ygB7D7J5spHN+cjG/aXAfPJ7VqyQGQjGc5sMuDxSnzJ8CsmCUUxlwWTMBJHsB9ZK8gKRI6I3i2Dx1kR8BMTaXb5JA98xMsnJGXIvFiSSBFOGQfq3YybKIjDFP3seno7u3L//jCf/n49c2fXd/PZzXR+faU/p3m532K1Y4Ywx+Jm6TyXn/8TI1x9QBGvPEAz0CM/ZGv5wZcsKXT4PNhqexoIzFJWGvr2i6loV99F9vsEbhidEvcrEQuZ/3P9Z1PB2eBxuh2PEcIEdejWoxXdVjNvgSZbSKhmt0/B+cghEh4axv8k4tymXqvhVYAJv9pup8PkYgGqZmIdS8XWIxIycmXgIozdCo9qKWB6SdRZbs8vKjiMBbzglt+jqeOUtpK/zwzs8vIeqrDgJt0S5unnfMtZLLQAPhz80fw4BGqkVvgavVmhRc4ovSOc+LIiAvo1qj79wSJw4UUFdRk05aARswwHYtKKlLLY0YnBH/os4ibpSY3MWjEfXcmmSalHqGVMVB2bhu1R05gYI0SxbRi+VankJphOlLImiTep6OPqOUrFyA+QXp3iHLxRrYaDZJTsarAgQUkkt41pP9DMnqBZClrN/uyj/K+UZTZ8tavOfan13PsRThC8gQ+1wQMdkPLgEaz3Fe7nIf/fRRjEAtftSO2pMaFtV2i/5Pz92qMT0iAk+wHsrjgnD9zSXggXiU0P7mdT03PIkBhgejb4nTdyHM9HFqWT8YRYZs39tjBasb0L13tBbUmbXLscsFU4SZvejvC+EwA2fPBogKc7YC7MVv/L5t6H0z0uiXABauhyll58a4a34AyTYq7fam+ETrb1fWrF0wvHH5mTiT+BWwtUPB0SD5lDa4Scydi+GNUqvgFlH0zZwsxPuctEmygF0uEGX7Op87qcv6VsIyKlakfHd2kB59j0HZQFqXRK9Vm01FSCUPsSiN9utuu0OwINML3Q9tWuD0GhPqz2tjC8QC4b5wUI/RHGd0Krc2YHK2d3paqJJNnN9eQrFRlejBxqt1sMddosZgumG+bZHy8OrJCks9bazhmHCj5prZvOg8ErJFyTSfXEsOdI0xcpZu+kWG9Hin3yMaqoxc575GvAvqMWlp4rTuljKiZxA1o176tAgwkNgmiMavkviQRr3kaTSwKUcjgvQ0BNRT/VtatdpAmlVPDPBZKdwBvdDIa1/AB1fo2qJoV+b8AET9BoZHech536DbgN0At4z75tHV0VSVuR7e1dx+1b37O1e1Uku6uIA/tSr1m3N6fTsm5tTy9lfXrj2Xd/b0Fxpi3l4T+87StBWB8AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f75b111f53e75e10662972d0a0490edd^sys_idNOT IN014c4aaf53235210662972d0a0490efc,554c8aaf53235210662972d0a0490e26,55a2321753231210662972d0a0490e1a,954c4aaf53235210662972d0a0490efe,d94c4aaf53235210662972d0a0490eff"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>set state to Approved</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:10</sys_created_on>
+        <sys_id>014c4aaf53235210662972d0a0490efc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:10</sys_updated_on>
+        <ui_id>dcdb076b-69a1-47b4-8314-65061a1ca92e</ui_id>
+        <values>H4sIAAAAAAAA/+1U32vbMBD+V4KfE2PHP5bkrVsI7GEtdKMvXTFn6ZwKZNmV5DRZyP8+yZaTNN26UAJjMD/5Tnfffd/pQ/dbj1Fv5sVIg3AapiQKo2gcBONJHOZplIdjGgFi6A09ASWaSomkktTEK+CNTWy3aVAECQkno2lSfBjFSTEeQZKPRynEaRSSHAiC3/XtdqaTMlVz2Nw5AJMhj4xTicKb3T8MvRqkmaVRerPtyZHe1JhxyJGbxnlFmhKFHnyeG4xzdfTdt72QU2F2hompQ8+YTZojyycMhh6uNQqKZlwBXOHQK0FQ0JXceDMtG5OQCPRG8M2+4pEJ3SktYa3YD4MfB7auQCONuC3sw8xtqF9OxQje1JpVostoyHm/uYo3pbjuJNjdYgEN10e7bZTBw9pStiQ6hsXXx+r5tp+3YKJV59jyigDfR6C1ZHmjUdnrQI7tUkqoayaWWS2rFWubDZXSX3IT+AWvns1MxZbCB2J5+2ZB4C9Mft6m70AyK+KLgTHNu1Z89tTYuZ0MRzhrNbeCs/aiTKkiktX6ygCv0NHcDZ2R8+QtA5Dp4b6PMA9mXmdhHE3TcJrljWIClTr8EJA0k/jUoNKvXfzRlQ0+Qeui91n6myU1uO5InSvoRfNvBDpTv8g5TycX8/TkL3naMfrHTP0nKwfjN9+yo5tu3auObKw0aPzeBEFEo9dWPTl9p1OxNJgaBx3q8GzOPcCCIafqFyJ6q7oB2coN2D/BF/NrmAbt9/8lvuBL/PATxvPArlQIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set state to Reject</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>bae86156-ff87-4770-b21f-ef7eaee1db16</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:11</sys_created_on>
+        <sys_id>554c8aaf53235210662972d0a0490e26</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:11</sys_updated_on>
+        <ui_id>d6b44c4b-96ac-41b2-b402-db76c0219d5b</ui_id>
+        <values>H4sIAAAAAAAA/+1U32vbMBD+V4KfneBf8ZK8dQuBPayFbvSlK+YsnVOBLLuSnCYL+d8n2XKSplsXSmAM5iff6e677zt96H7rMerNvARpEE7DlMRhHEdBEE2SME/jPIxoDIih53sCSjSVEkklqYlXwBub2G7ToAjGJJwMp+PiwzAZF9EQxnk0TCFJ45DkQBBGXd9uZzopUzWHzZ0DMBnyyDiVKLzZ/YPv1SDNLI3Sm21PjvSmxoxDjtw0zivSlCj04PPcYJyro+++7YWcCrMzTEwdesZs0hxZPmHge7jWKCiacQVwhb5XgqCgK7nxZlo2JiER6I3gm33FIxO6U1rCWrEfBj8JbF2BRhpxW9iHmdtQv5yKEbypNatEl9GQ835zFW9Kcd1JsLvFAhquj3bbKIOHtaVsSXQMi6+P1fNtP2/BRKvOseUVAb6PQGvJ8kajsteBHNullFDXTCyzWlYr1jYbKuVoyU0wKnj1bGYqthQjIJb3yCwIRguTn7fpO5DMivhiYEzzrhWfPTV2bifDEc5aza3grL0oU6qIZLW+MsArdDR3vjNyPn7LAGR6uO8jzIOZ11mYxNM0nGZ5o5hApQ4/BCTNJD41qPRrF390ZYNP0LrofZb+ZkkNrjtS5wp60fwbgc7UL3LO0+OLeXrylzztGP1jpv6TlYPozbfs6KZb96ojGysNGr83QRDT5LVVT07f6VQsDabGQYfqn825B1gw5FT9QkRvVTcgW7kB+yf4Yn4N06D9/r/EF3yJH34CSgbpvlQIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set State to Awaiting Approval.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:21</sys_created_on>
+        <sys_id>55a2321753231210662972d0a0490e1a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 16:29:57</sys_updated_on>
+        <ui_id>60f05c18-95f7-45f2-a5b2-6a4631cbacea</ui_id>
+        <values>H4sIAAAAAAAA/+1UTWvjMBD9K8FnY+w4DU1u24bAHraF7tJLtwhZmiQCWXb1kSYb8t93ZMtJmu62oQTKwvrkGc28eW/00MMmEjwaRwPgaTbKhizP8ryfpv3LQVYM8yLr85wCZFEcKVoCVmpgleYYL6l0PrHZXGugFjjJEua0BmW3WzznwtSSru9DGWbYQkiO59H44TGOaqoR0YKOxpujI7uugUhagMTGScVciaC9rxPEOJVt133X0T2m72dgzAM6ET6JR55PlsYRrCwoDjhuRqWBOCqp4tRWeh2NrXaYQNX8Vsn1rmIhlG2VlnRlxC/EH6S+bgYojYUt7EISNtQtpxIMbmsrKtVmLC1kt7lKulLdtBL8bmFGnbQHu3UG8aD2lD2JluHs+6J6vuvmTYVq1AW2smJU7iJqrRaFs2D8dYCEZiklrWuh5qTW1VI0zUilTOYSg2Qmq2ecacRcJZR53gkuiCZTzE+a9D3Vwov4hjDYvG3Ekyfn57YyAmHSaG4Ek+aisNQwLWr7BYGXEGhu42DX4uItA7DR/r4PMPeWXZFskI+G2YgUzggFxux/GNWcaHhyYOxrF1+Fst41bVz0MUv/8KR6Ny2pUwW9aP6LwGDqF7ng6YuzefrykzwdGP1jpn7Pymn/zbfs4KYb95oDGxuLz+5Pl6Y577+26tHpB50KJWJa6LWo8cmcO4CpAMnNH0R0Vg0DyDIM2D3BZ/NrNkyb7/9LfMaX+PE3dDiRBjoIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment>Get approval from Requested for's Manager</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:10</sys_created_on>
+        <sys_id>954c4aaf53235210662972d0a0490efe</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:33</sys_updated_on>
+        <ui_id>df1aeb88-679c-45be-b218-4c8a328efa41</ui_id>
+        <values>H4sIAAAAAAAA/+1Y32/bNhD+Vww92xplWbLst6xBgA7bCiRpX+JAoKiTzYKmVFFK4xn+33eUKEuxE9XIXGQt+hKEx/vx3d13FOm7rcVja25Ng2QMs9mYRA4hLiGBx0jgQuRO/alLGbGGlqRrQM0cWJrHuH6gotSC7fZdDrSAOHRsVuY5yGK3w/2Yq0zQzSejhhK24iLGfWt+dz+0MpqjxwJya7492Co2GYSCRiDQ8DJl5RqdDt5foo9T0TbW1w3cQ/g6Bq5j4z3kWohbGg8ZWvBYgIwBoyVUKBhaaypjWqT5xpoXeYkCTDr+IMVmr7HisqgTXdNHxf9B9+5Y6yWAmTFThP0yNAVqapNyBh+ygqeylhQ0Ek3hUlGu5d91Brq0kNBSFJ3Slgr9QaYhaxA1wuRmlX69buJdcVklZ9CKlFGxX9GiyHlUFqB0N0BAVZM1zTIul2GWpw+8MkYoa3spcGEnIv2KMRVfSpsyjdvGAlH7CuWXlfgTzblO4i90g8a7KvnwS6nj1mkYwGGVc50waimW86y4QJ8PYBDuhoaoEettPWs7XbtrefoYOhN35juzMCoVl6BU+w+jeRzm8KUEVRxT93ejNnhHK+q8jse3Gs+gauLw5FyeGB/nZkhcLUNZuzYcdvo5bCSnkDggb0Nig+gHY/G3CAwT3/XwzzRxiTN2SAB+ELAZoSzwfW/itk3GeIiYCiQmVei7pfIZT9cbrJhcNow8AVxjeGHQDa4bdC/CNixVTSjD0PHZGOr4PyhFS357UJta8udhd74Pl3W4j5Ljsfded98fR/6MBPEoTkg0mgSuN6IMyAh8xwMv9pnnuP+Z/8TpO/Ti4BkiJRxE98bRbByPQWfndeNwpUM9OaRPwHs0ElcG8EuJmIGolgfH9vmGIiDkjabi5719sF4yQOfw/pyWuezhbrjiqmrpixzuaJyLyyfAb4z/qPEfUvkwrR4mu7+Y/D9m8sTrpQI8c3qxVMZc41MdPtdnHqhr+AysUBdy8/Fuu/VJQjzmBKOZl0xHOtaIetF45FO8YDgsws8KteunmF2GbSsdGxlCl5DvdvfHk/FdY71uxtpbUClANXN2QnH371Nj11tsM2XtzcoYmUmbnOu5+naD9nPe9VkvD5JZ2/e4xHLQovte3S6sGuTCmi8smUpYWMOFpbVCTYhKjBoIbr9Rybbb3a6WlDk1DpzOsrWO6UZVmoqtIEZSVdInkprpRn7On3VuTIDBJeL+7ZZ3vlLfrtr+t6Gytn+2kM2zo8mkrhzvfqO8s32jJr8G5+BhEe4v4/hJwiPo1dN0/y8CGm8opRQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set state to Approved</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:11</sys_created_on>
+        <sys_id>d94c4aaf53235210662972d0a0490eff</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:11</sys_updated_on>
+        <ui_id>1535bfaf-55ef-4db3-b119-ecf678f6b4c7</ui_id>
+        <values>H4sIAAAAAAAA/+1U32vbMBD+V4KfE2PHP5bkrVsI7GEtdKMvXTFn6ZwKZNmV5DRZyP8+yZaTNN26UAJjMD/5Tnfffd/pQ/dbj1Fv5sVIg3AapiQKo2gcBONJHOZplIdjGgFi6A09ASWaSomkktTEK+CNTWy3aVAECQkno2lSfBjFSTEeQZKPRynEaRSSHAiC3/XtdqaTMlVz2Nw5AJMhj4xTicKb3T8MvRqkmaVRerPtyZHe1JhxyJGbxnlFmhKFHnyeG4xzdfTdt72QU2F2hompQ8+YTZojyycMhh6uNQqKZlwBXOHQK0FQ0JXceDMtG5OQCPRG8M2+4pEJ3SktYa3YD4MfB7auQCONuC3sw8xtqF9OxQje1JpVostoyHm/uYo3pbjuJNjdYgEN10e7bZTBw9pStiQ6hsXXx+r5tp+3YKJV59jyigDfR6C1ZHmjUdnrQI7tUkqoayaWWS2rFWubDZXSX3IT+AWvns1MxZbCB2J5+2ZB4C9Mft6m70AyK+KLgTHNu1Z89tTYuZ0MRzhrNbeCs/aiTKkiktX6ygCv0NHcDZ2R8+QtA5Dp4b6PMA9mXmdhHE3TcJrljWIClTr8EJA0k/jUoNKvXfzRlQ0+Qeui91n6myU1uO5InSvoRfNvBDpTv8g5TycX8/TkL3naMfrHTP0nKwfjN9+yo5tu3auObKw0aPzeBEFEo9dWPTl9p1OxNJgaBx3q8GzOPcCCIafqFyJ6q7oB2coN2D/BF/NrmAbt9/8lvuBL/PATxvPArlQIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f75b111f53e75e10662972d0a0490edd^sys_idNOT IN554c4aaf53235210662972d0a0490eff,c14c4aaf53235210662972d0a0490efb,cd4c4aaf53235210662972d0a0490efc,dd4c8aaf53235210662972d0a0490e25"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5d4c4aaf53235210662972d0a0490efe</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:11</sys_created_on>
+        <sys_id>554c4aaf53235210662972d0a0490eff</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:34</sys_updated_on>
+        <ui_id>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XPieGPOHNzCzYUGLCtQFv0shUGLdGJMFlyJTlpFuS/j/JHGmwJNgw97mY9UuR7FJ/3gW5d0zr7oJfWipUKFl+fJoFQHqPvfaCgxmARMK24cEKrogMmwQZk6wN3+NyidVfLpjF6g5xCXNhGwu7xcgZbC8kNDt0aMFTToQkW+19CbtdgIaFESYXunRFqRdcFp1MVQRVfs5ilyTxNoijJZ3E5T8s44SkgpJQ3Xnw/kr/61CGTi6p8P8Lt2Ekb7mnF0STAF4eKE/1FBdLiJKhBcXDa7I6IQeC3Sr4Ca6EclQt88osVP6h2kmU+sULSyLAPHo/FMLoeZmstGN42nmCPOCjlcIdp2dbqS6/DDx0raKUbh05Ia6keNp60ZzFQqu7Xens3NrwRqhM4BKVmII8ncDSGsnVo/cOgxJoKFTU0DQ2n8I8pusvEpQ5Xkg5hJfWWmvpNCoF54iHNCMIbwj908CMY4VV8pjJ0uadZghWs6LaOyjlDEg7dWIrn1hPqBQ5Sin4alGCZEY1bUp8NDqwPk99X9mRb93texYBlnk/n767ZdJaVOC2TOJ/OWA5pktMUZ3EI3aqCLKwDh4fDtzaKUg4XV/ytyr6FL64hq7I4ys77YjY/54szjrhshuQPZvDP95deiKLovxlOzSBs0S/1oK1r/s9eePKL33ew/d5wZMISkQePfRz/8j6wowUQ7BTaavPdS3jFDj8Bk6++CS8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c94c4aaf53235210662972d0a0490efa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:10</sys_created_on>
+        <sys_id>c14c4aaf53235210662972d0a0490efb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:33</sys_updated_on>
+        <ui_id>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</ui_id>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8FYNnQdAjNhrfghQBCrQN2gS5tIGwIlc2UYpUSMqOK/jfu9TDMVIbDYoeexNnubszw4E6ZlrftN7dmyvn5Eqz5bfHiEkdMPrumIYa2ZJxo4X00uiiByK2AdWGwpcWtJd+N5NulhIupGsU7B7OlPlaKmFx3NOApWkeLVt2r0p+12ChoERFU+68lXpF7VLQqUqgSi95yvNskWdJkr27SMtFXqaZyAEhp3tT4/VEe/axR6KzesI+wt20yVgRaKVJxPDZoxZIqytQDiNWgxbgjd0dEIsgbrV6AdZSexrHwuVnJ3/S7Gw+DxcrJI0ch+LhWIy+DTBfG8nxtgkEB8RDqcYeblRb68+DjuA4VtAqPzlOSOtoHjaBdGAxUqru1mb7dVp4I3UvcCwqw0EdTuDJhrL16MLDoMKaBhU1NA2ZUzTWbGTfTFzqeKXoEFfKbGlpyFAMPBCPySOIbwh/38MPYGVQ8YnGUPNAswQnedHnjcZ5SxL2vS3FUxsIDQJHKcXgBl1w3MrGX9GeDY6s99HvYT3Kaddd0yN5FEUa89aSBz5+GsO5339vkyQXJ/L71rZ/ketLmFfzNJmfzvXF4lSuTyT6fJizP4Q52P/GLCdJ8j/Mx2GWrhhCOWrrl/91lh9DcIcNbsiNQC4dEbkP2Ifp/xwKOwqA5MfQ1tgfQcILtv8FBJnJ2OkFAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c54c4aaf53235210662972d0a0490efc</block>
+        <comment/>
+        <connected_to>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:10</sys_created_on>
+        <sys_id>cd4c4aaf53235210662972d0a0490efc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:33</sys_updated_on>
+        <ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/TQBD9K2HPlmU7tILcqlaVkIAKWvUClTXeHScr1rvufiQNVv47s/5Io5LSigMnbp43X+/NPrljJvg2eHdjzpyTS80W3+4SJnXE6LtjGhpkC8aNFtJLo8seSNgaVIiJLwG0l347k26mjZ/llBPStQq2t38o4SuphMVxXwuWpnq0bNE9Sflti6WCChVNuvZW6iW1S0FRnUGdv+c5nxen8yLLindv8+p0XuWFmANCQXVT4/lEf/axR5JndcV9hLtpk7Ei0sqzhOGDRy2QVtegHCasAS3AG7vdIxZBXGn1CKyk9jSOxeIHJ3/S7OLkJBbWSBo5Dsl9WI63G2C+MpLjVRsJDoiHSo093KjQ6M+Djnh1rCEoP12dkOBoHraRdGQxUqqvV2bzdVp4KXUvcEwqw0HtI/B0hip4dPFhUGFDg8oG2paOU7bWrGXfTFyadKkoSGtlNrQ0eikFHomndCNILwm/6OFbsDKq+ERjqHmgWYGTvOx9R+O8JQm7/izlfYiEBoGjlHK4BhU4bmXrz2jPGkfWu+R30x74tevO6ZE8ijJPebB0A5/ejwbd7d58D1k2F0dM/Oq+f+Ds/Jizj3j6eTsXL9g5PsAr3Zxl2X87H9pZunKw5aitX/7Xbr6L1h02uME3Arl0ROQmYh+mP3VMbMkAkh9CG2N/RAmP2O4XSmMYtPMFAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d54c8aaf53235210662972d0a0490e25</block>
+        <comment/>
+        <connected_to>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:11</sys_created_on>
+        <sys_id>dd4c8aaf53235210662972d0a0490e25</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:34</sys_updated_on>
+        <ui_id>bae86156-ff87-4770-b21f-ef7eaee1db16</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f75b111f53e75e10662972d0a0490edd"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f75b111f53e75e10662972d0a0490edd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:20</sys_created_on>
+        <sys_id>05a2fed353231210662972d0a0490ec4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 15:39:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f75b111f53e75e10662972d0a0490edd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-11 15:39:20</sys_created_on>
+        <sys_id>f4a2fed353231210662972d0a0490ec0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-11 15:39:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f75b111f53e75e10662972d0a0490edd"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f75b111f53e75e10662972d0a0490edd"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>business_card_approval_flow</internal_name>
+        <label_cache>[{"name":"df1aeb88-679c-45be-b218-4c8a328efa41.approval_state","label":"5 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"b3a78e20-47b0-48cf-a4f6-b3ddcda9482f":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record.state","label":"1 - Update Record➛Business Card Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"x_1439619_business_business_card_request","column_name":"state","choices":[{"label":"Pending","used":false,"image":"","reference":false,"rawLabel":"Pending","selected":false,"missing":false,"value":"-5","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Open","used":false,"image":"","reference":false,"rawLabel":"Open","selected":false,"missing":false,"value":"1","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"rawLabel":"Awaiting Approval","selected":false,"missing":false,"value":"2","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Approved","used":false,"image":"","reference":false,"rawLabel":"Approved","selected":false,"missing":false,"value":"3","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"Reject","used":false,"image":"","reference":false,"rawLabel":"Reject","selected":false,"missing":false,"value":"4","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}}],"usedInstances":{}},{"name":"Created_1.current.quantity","label":"Trigger - Record Created➛Business Card Record➛Quantity","reference":"","reference_display":"Quantity","type":"choice","base_type":"choice","parent_table_name":"x_1439619_business_business_card_request","column_name":"quantity","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"label":"1","used":false,"image":"","reference":false,"rawLabel":"1","selected":false,"missing":false,"value":"1","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"2","used":false,"image":"","reference":false,"rawLabel":"2","selected":false,"missing":false,"value":"2","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"3","used":false,"image":"","reference":false,"rawLabel":"3","selected":false,"missing":false,"value":"3","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"4","used":false,"image":"","reference":false,"rawLabel":"4","selected":false,"missing":false,"value":"4","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}},{"label":"5","used":false,"image":"","reference":false,"rawLabel":"5","selected":false,"missing":false,"value":"5","parameters":{"name":"x_1439619_business_business_card_request","dependent_values":[""]}}],"usedInstances":{"950ef5ae-7aed-4126-aaf9-d539ad40f6f0":["condition"],"2641e8b5-ae33-469c-b68e-d18f498cb46d":["condition"]}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record","label":"1 - Update Record➛Business Card Record","reference":"x_1439619_business_business_card_request","reference_display":"Business Card","type":"reference","base_type":"reference","usedInstances":{"1a3d094a-99e0-4f2f-b518-6ca317a08e49":["record"],"50941cd7-88a7-464b-9d65-285d16a892e8":["condition"],"dcdb076b-69a1-47b4-8314-65061a1ca92e":["record"],"1535bfaf-55ef-4db3-b119-ecf678f6b4c7":["record"],"d6b44c4b-96ac-41b2-b402-db76c0219d5b":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"60f05c18-95f7-45f2-a5b2-6a4631cbacea.record.u_reference_1.manager","label":"1 - Update Record➛Business Card Record➛Request for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","usedInstances":{"40dc826a-2e4f-4271-8d92-095553a4d5c3":["approval_conditions"],"df1aeb88-679c-45be-b218-4c8a328efa41":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Business Card Record","reference":"x_1439619_business_business_card_request","reference_display":"Business Card","type":"reference","base_type":"reference","usedInstances":{"60f05c18-95f7-45f2-a5b2-6a4631cbacea":["record"],"40dc826a-2e4f-4271-8d92-095553a4d5c3":["record"],"17cac9b1-bdec-49ae-91b6-ae5873035112":["record"],"df1aeb88-679c-45be-b218-4c8a328efa41":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Business Card Approval Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Business Card Approval Flow">f75b111f53e75e10662972d0a0490edd</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb5c0eaf53235210662972d0a0490e9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=cb5c0eaf53235210662972d0a0490e9e^sys_idNOT IN875c0eaf53235210662972d0a0490eb8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>cb5c0eaf53235210662972d0a0490e9e</id>
+        <name>Business Card Approval Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_id>875c0eaf53235210662972d0a0490eb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=875c0eaf53235210662972d0a0490eb8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=cb5c0eaf53235210662972d0a0490e9e^sys_idNOT IN1b5c0eaf53235210662972d0a0490eb9,d35c0eaf53235210662972d0a0490ec6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</model>
+        <model_id>cb5c0eaf53235210662972d0a0490e9e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_cb5c0eaf53235210662972d0a0490e9e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_id>1b5c0eaf53235210662972d0a0490eb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1b5c0eaf53235210662972d0a0490eb9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</model>
+        <model_id>cb5c0eaf53235210662972d0a0490e9e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_cb5c0eaf53235210662972d0a0490e9e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_id>d35c0eaf53235210662972d0a0490ec6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d35c0eaf53235210662972d0a0490ec6"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=cb5c0eaf53235210662972d0a0490e9e^sys_idNOT IN5b5c0eaf53235210662972d0a0490ee5"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>5b5c0eaf53235210662972d0a0490ee5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS5W3XyaIBthvU8bYPQSpQImkTpSmvRCnxLvLvHepmWRfHjpWt8xJEJMU5c3TmDOn7HzpHHuH6pT5HHif6QGdCklAgPt+sCQxLNewKtFJzKyQwkkG40S9lGJOBTsNgNSerNUcSFlPEIxgMQkxC/dIc6AniMbnbRDcYdoL3023yPfV8Gp6fXHNoO2PTcb04YoJE0fYfH4XYDcm3mEQSXsEsgmCbv/I3P+bLtCksg2l/yTgOidAv7x8G+hqFEFAqMD9qU0wh8qmPHIsYvm3almUY1sXQ9Ma2Z1rYRsQwYMM6O7UMZAtJ2/TJkyQCE1wy0+AvJAjfCr4pVyyB/oyrFXqK2HfY/cJQ6ygB7D7J5spHN+cjG/aXAfPJ7VqyQGQjGc5sMuDxSnzJ8CsmCUUxlwWTMBJHsB9ZK8gKRI6I3i2Dx1kR8BMTaXb5JA98xMsnJGXIvFiSSBFOGQfq3YybKIjDFP3seno7u3L//jCf/n49c2fXd/PZzXR+faU/p3m532K1Y4Ywx+Jm6TyXn/8TI1x9QBGvPEAz0CM/ZGv5wZcsKXT4PNhqexoIzFJWGvr2i6loV99F9vsEbhidEvcrEQuZ/3P9Z1PB2eBxuh2PEcIEdejWoxXdVjNvgSZbSKhmt0/B+cghEh4axv8k4tymXqvhVYAJv9pup8PkYgGqZmIdS8XWIxIycmXgIozdCo9qKWB6SdRZbs8vKjiMBbzglt+jqeOUtpK/zwzs8vIeqrDgJt0S5unnfMtZLLQAPhz80fw4BGqkVvgavVmhRc4ovSOc+LIiAvo1qj79wSJw4UUFdRk05aARswwHYtKKlLLY0YnBH/os4ibpSY3MWjEfXcmmSalHqGVMVB2bhu1R05gYI0SxbRi+VankJphOlLImiTep6OPqOUrFyA+QXp3iHLxRrYaDZJTsarAgQUkkt41pP9DMnqBZClrN/uyj/K+UZTZ8tavOfan13PsRThC8gQ+1wQMdkPLgEaz3Fe7nIf/fRRjEAtftSO2pMaFtV2i/5Pz92qMT0iAk+wHsrjgnD9zSXggXiU0P7mdT03PIkBhgejb4nTdyHM9HFqWT8YRYZs39tjBasb0L13tBbUmbXLscsFU4SZvejvC+EwA2fPBogKc7YC7MVv/L5t6H0z0uiXABauhyll58a4a34AyTYq7fam+ETrb1fWrF0wvHH5mTiT+BWwtUPB0SD5lDa4Scydi+GNUqvgFlH0zZwsxPuctEmygF0uEGX7Op87qcv6VsIyKlakfHd2kB59j0HZQFqXRK9Vm01FSCUPsSiN9utuu0OwINML3Q9tWuD0GhPqz2tjC8QC4b5wUI/RHGd0Krc2YHK2d3paqJJNnN9eQrFRlejBxqt1sMddosZgumG+bZHy8OrJCks9bazhmHCj5prZvOg8ErJFyTSfXEsOdI0xcpZu+kWG9Hin3yMaqoxc575GvAvqMWlp4rTuljKiZxA1o176tAgwkNgmiMavkviQRr3kaTSwKUcjgvQ0BNRT/VtatdpAmlVPDPBZKdwBvdDIa1/AB1fo2qJoV+b8AET9BoZHech536DbgN0At4z75tHV0VSVuR7e1dx+1b37O1e1Uku6uIA/tSr1m3N6fTsm5tTy9lfXrj2Xd/b0Fxpi3l4T+87StBWB8AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cb5c0eaf53235210662972d0a0490e9e^sys_idNOT IN135c0eaf53235210662972d0a0490ee3,1b5c0eaf53235210662972d0a0490ee2,d35c0eaf53235210662972d0a0490ee4,d35c0eaf53235210662972d0a0490ee5,db5c0eaf53235210662972d0a0490ee4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>set state to Approved</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>135c0eaf53235210662972d0a0490ee3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>dcdb076b-69a1-47b4-8314-65061a1ca92e</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPgBICGfC2gZAmda3UTry0VXRj34Alx0lth8IQ/31O4kBEq45KfUHLE75fPufmHPK4J5yRKRki8/yJH9LAD4KB5w3GQz8Og9gfsAAQfdIlElK0lQppppg9b0AUZWC/D73EG1F/3JuMkm+94SgZ9GAUD3ohDMPApzFQhH7ddzjYTsZ1LmC3dANshK65YAolmT4+d0kOyt5lUJHp/ix1KVgBMQpbet+gPUdvdnl5ZhktUpQm4k3wxnXOXabzc24ztqmE43tdgluDkqEFkoDQ2CUpSAYmUzsyNaqwAYXA7qTYHSvWXJqaaApbzf/Ym4deWZegZUbdEo7HyC2oDidzMPBgJ1NTqOO+Mk5R1zthmEAhzKwdqwvucsMzWbcYiEXTnYkilbf1RshxQOt9FNqCwLzkWSKvaSUP6+z1vgG54LJaiaMoMgrieAJjFI8LU8LZExRY7TiFPOdyFeUq2/Cq2UJJ+ythD/1EZK/2Ts1Xsg+0xN23W4X+wsbnVXgJipckftkxtvnQJXqnZwK0PlGxO4xeihJJTcxRiKotVCuIKiWUzVTx3Hy3V23QAT90nR3i0UcKo5OToFozT5bYRv4wmIT+JIoLzSVqffpBQbFI4UuB2rz1wg9X1plBJdPPGeMC2I0xfldyeJ+G88ab2E27t3NbJ5wzRl/mjPE1OcPRuHpr/MsQ3uDDv9yWkioP6JYZtAGDT4XnBSx4K/iz7Of0fgGqRu8LjoLpd2A2YsfUwjIY1bDPBO+SnaVLHj8HX6Z6P/Sq54q0/998FZ7/Ats0WhwmCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set State to Awaiting Approval.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>1b5c0eaf53235210662972d0a0490ee2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>60f05c18-95f7-45f2-a5b2-6a4631cbacea</ui_id>
+        <values>H4sIAAAAAAAA/+VVXWviQBT9KzLPISTGSvVtVxEWui20iy/dEiYzNzow+eh8WF3xv+9NMolBS9dCX2R9cu7XnHM9x3neE8HJlIyAB+EkHLMojKJhEAxvR2EyjpJwyCMKEBKP5DQDrFTACsXxvKHSVoH9fqaAGuBx6DOrFOTmcMA8F7qUdLd0ZRhhayE55sn0+cUjJVU40YAi0/1J6lJIkiYgsfSxxXSK0ezK6swLZjPEFYs2eOc65y4z+DHHDDZVcMLAI7A1kHNAICmVGjyS0ZxTU6gdmRplMYCk+UMud13FWuSmIZrRrRZ/8OZRUNWlgMyYW0J3jN2CmnA6p4Y+4WRmrOr2VQgGutkJh5RaaWb9WFPwUBpR5E2LoYlsuwtps/y+2QjpBvR+D6sRBJQVzwp5Qyt9Whdvjy3IhcjrlTiKsmBUdidqjBKJNRWcPQEJ9Y4zWpYiX8WlKjaibkYomb+SePBTWbzhnVqscp+yCrePW6X+AuPzOrykSlQkfuIYbD54RO/0TFKtj1Rwh/GrrZA0xByFuN5CvYK4VkLVzJQozTe8agMO+MFzok9uPlIYmxwF1Zt5FP42DkfRZBxO4sRqkYPWxy+MKh4reLWgzbkXvruywYzWMv2cMS6A3RrjVy2H92k4b5zF7vq9g/sm4Zxx82XOuL0mZzgaV2+NfxkiGH74l9tTUu0B3TODNvgE/LZBEPHhueBPsp/T+wWoWr0vBEiu34HZih0yhGUgbmCfCN4lB0uX7J6DL1N9OA7qzxVp/795FV7+Akvy5e0MCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment>Get approval from Requested for's Manager</comment>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>d35c0eaf53235210662972d0a0490ee4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>df1aeb88-679c-45be-b218-4c8a328efa41</ui_id>
+        <values>H4sIAAAAAAAA/+1YXW/aOhj+KyjXwBxCQuCup6jSjvYhtd1uShU5jgOejMNiuyuL+O97Ezskg5bBEb3o6W6q+v2wn/flefyRu8JhiTNxRmE6oOPxAMUuQh5CoU9Q6NHYGwUjDxPkdB2BlxQic0qyPIHxA+a6NBTFZU6xoknk9onOcyrUZgP+hMkVx+uvNgwsZMF4An5ncnffdVY4hxkVzZ1JseM6FhLHMeUQel1j2sWo1qtynGRELwFXxGrjB5s5tZ7O+yl4IKmEg7oOfVRUJBRwpJhL2nWWWCRYZfnamahcgwFqTj4Lvt5GLJhQps4lfpTsJyzsDcq4lEJhxPZgO4xsf4w5nWKFb2BmonS+bVfGCJWmJQlNsebqsm0zAZ9XimXCpCgc8zo743opPpmGONsJWj+HlgCCrso6S+SmrPRmkf24rkFeMVF1xJbIM4L5doSVylmsVQmncCinVYuXeLViYh6t8uyBVckAZdmfcxj0U579gDUlm4s+JiXuPnQV96/APq3MX3HOyiI+wjSQvOk6ci0vOZayKQV6GH3XJRJTmC0hqrpgWlDmkZyt1AWs8kAt5k3X0j0mB7lFGiqZ6Rq2P0bu0BsH7jiKtWSCStn8Q3CeRDn9rqlU+wL4x4Z1LnHFzdPUcATiWg23FvJOBVYL1TCqfL9LoUrrfDIOqwT3sBKspZGC4dATSgjRK1KCLevVS+FPKqDDwPPhzyj1kDtwUUiDMCRjhEkYBP7QazgECKAGzIHdWMLcjR7OsNEfAaOm9oXF0bmucTwL0NJdwg8j5jtUv6mNluaDE2n+/I7vBm+J6Jrd7nTZWPb6/DKKKJf7Ihjst+9LHgWDOBijMOklKYp7w9Dze5hQ1KOB61M/CYjvei+gIuQe2pmT8AmSpozy9hWqduyLqeU5TVRHoNoT1ZWF9RxcK6lq+NQJUuXvnCDnk1aI0GvS1lu6TpGDZKOtg+RbpnNxQAHRgsmKGc8qoRVxmiKOAFkr4l+DclcQu+D/ix68v3r4/+th6B+kWutyvmU1yUTCSsSypQqzM1N5Tb9RouSFWH+5K4oApcgnbtgb++moV67Vw3486AUYLlIuieHQw33zBO7rqGGE2wei4TnNN5v7fX296FqnKfWI9m1f/ppT+ad2Wp02d0Sb1NZqc7O0TqvX4bm+Bbwyub6VNxA5yLV03HAr0dAgrNofA4qZY2DPnMnMEZmgM6c7c8qoqCRXZYYIALd1VLai2GyMRefYTuC2hk12gteyipRkQRPgZmX9zRJVYrD2c3x5O6Intf6mmnampin7baqfYDVO0xe2d07e2IBqpne3rH1e+mc7L4d/5XeOB1e0fZLAYQi73xk1ef8LZLJEBo4WAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set state to Reject</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>bae86156-ff87-4770-b21f-ef7eaee1db16</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>d35c0eaf53235210662972d0a0490ee5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>d6b44c4b-96ac-41b2-b402-db76c0219d5b</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPgBISMuBtAyFN6lqpnXhpq+jGvgFLjpPaDoUh/vucxAFEq45KfUHLE75fPufmHPK4I5yRCQmRef7Yj2jgB8HA8waj0E+iIPEHLABEn3SJhAxtpUKaK2bPaxBlFdjtIi/1htQf9cbD9FsvHKaDHgyTQS+CMAp8mgBF6Dd9+73tZFwXArYLN8BG6IoLplCSyeNzlxSg7F0GFZnszlKXghWQoLCl9y3ac/RmW1RnltMyQ2li3gZvXOfMZTo/ZzZjmyo4vtcluDEoGVogKQiNXZKBZGBytSUTo0obUAjsTortoWLFpWmIZrDR/I+9OfSquhQtM+qWcDjGbkFNOJ2BgQc7mZpSHfaVc4q62QnDFEphpqexpuCuMDyXTYuBRLTduSgzedtshBwGnLyPUlsQWFQ8K+QNrfRhlb/etyDnXNYrcRRFTkEcTmCM4klpKjg7ggLrHWdQFFwu40Lla143WyhZfynsoZ+K/NXeqflS9oFWuPt2q9Cf2/isDi9A8YrELzvGNu+7RG/1VIDWRyp2h/FLWSFpiDkKcb2FegVxrYSqmSpemO/2qjU64Puus0My/EhhdHwU1MnMoyU2sR8G48gfx0mpuUStjz8oKBYrfClRm7de+OHKOlOoZfo5Y1wAuzXG71oO79Nw3ngTuznt7dw2CeeM4Zc5Y3RNznA0rt4a/zKEN/jwL/dESbUH9IkZtAGDT6XnBSx8K/iz7Of0fgGqVu9zjoLpd2C2YsfMwjIYN7DPBO+SnYVLHj4HX6Z6P/Lq54q0/998FZ7/AowG9oomCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Set state to Approved</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>db5c0eaf53235210662972d0a0490ee4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>1535bfaf-55ef-4db3-b119-ecf678f6b4c7</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPgBICGfC2gZAmda3UTry0VXRj34Alx0lth8IQ/31O4kBEq45KfUHLE75fPufmHPK4J5yRKRki8/yJH9LAD4KB5w3GQz8Og9gfsAAQfdIlElK0lQppppg9b0AUZWC/D73EG1F/3JuMkm+94SgZ9GAUD3ohDMPApzFQhH7ddzjYTsZ1LmC3dANshK65YAolmT4+d0kOyt5lUJHp/ix1KVgBMQpbet+gPUdvdnl5ZhktUpQm4k3wxnXOXabzc24ztqmE43tdgluDkqEFkoDQ2CUpSAYmUzsyNaqwAYXA7qTYHSvWXJqaaApbzf/Ym4deWZegZUbdEo7HyC2oDidzMPBgJ1NTqOO+Mk5R1zthmEAhzKwdqwvucsMzWbcYiEXTnYkilbf1RshxQOt9FNqCwLzkWSKvaSUP6+z1vgG54LJaiaMoMgrieAJjFI8LU8LZExRY7TiFPOdyFeUq2/Cq2UJJ+ythD/1EZK/2Ts1Xsg+0xN23W4X+wsbnVXgJipckftkxtvnQJXqnZwK0PlGxO4xeihJJTcxRiKotVCuIKiWUzVTx3Hy3V23QAT90nR3i0UcKo5OToFozT5bYRv4wmIT+JIoLzSVqffpBQbFI4UuB2rz1wg9X1plBJdPPGeMC2I0xfldyeJ+G88ab2E27t3NbJ5wzRl/mjPE1OcPRuHpr/MsQ3uDDv9yWkioP6JYZtAGDT4XnBSx4K/iz7Of0fgGqRu8LjoLpd2A2YsfUwjIY1bDPBO+SnaVLHj8HX6Z6P/Sq54q0/998FZ7/Ats0WhwmCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cb5c0eaf53235210662972d0a0490e9e^sys_idNOT IN175c0eaf53235210662972d0a0490ede,5b5c0eaf53235210662972d0a0490edf,5f5c0eaf53235210662972d0a0490ee0,db5c0eaf53235210662972d0a0490ee1"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c94c4aaf53235210662972d0a0490efa</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>175c0eaf53235210662972d0a0490ede</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQdAjNprcAgcBCqQN2gS5tIGwIimbKEUqfNhRBf97l3rYRuqgCdpjb+Isd3d2uAN1RHvXeGfv9aW1YqXIxbfHiAgVMPzuiIKakwtCtWLCCa2KHojIBqQPgS8elBOunQk7SxFnwjYS2odXwnQtJDN87NOAwWqOG3LRvQgJhtlVAlV6TlOaZ4s8S5Lsw1laLvIyzVgOHHIsKKHkEq8uJ4Kzmx6JXmXu2ibg1hmhVuP5ZqxyN4HasMAqTSLCnx1XjCOfCqTlEalBMXDatHvEcGC3Sh6AtVAOy5Fw+dmKn9gwm8/DxYrjiJQPwf2xGGUb4OoKHCAVT50341W61oJyO4jDeAVeuuUxNly4bcKoQ4qDUk7ZWvpafR4UIfsC0ysh4i2S4E2YNFAf56ju1nr7dWJ5LVSvyhiUmoLcn8ChdqV3gU9HuOQ1FipqaBpUtGiM3og+GbnU8UriIa6k3mLTsHcx0EA8RmEhvkb8qocfwIgwxScsg8kDzRKsoEW/o1gOZeJkFxHb2qUEaw9DorrFkw8Uh5HH4YpBn5BCjWjcJXbe8HGOXfT7yh9te9ct8a0dZ0UaU29QFRc/jSu+2333SZKzEy54a9r73HEO82qeJvPT7jhbnHLHCV+80xLZHywR3uONjkiS5L8l/toSwhbDIo+z9c3/oSMew/oPPfdaU2GR2n3APk7/ihBocbkEPYa22vwIQx2w3S8mYUQvdQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c54c4aaf53235210662972d0a0490efc</block>
+        <comment/>
+        <connected_to>950ef5ae-7aed-4126-aaf9-d539ad40f6f0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>5b5c0eaf53235210662972d0a0490edf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K8XPUZSkbIK+TZ0mIQ0m2LQXmKIb22ktHDvzR7sQ9b9zHSdtBQWG2CNv9blf55zcq/ZEe9d6Z+/0hbVipcji80NChAoY/u6JgoaTBaFaMeGEVuUAJGQD0ofARw/KCdfNhJ0p7WY5xpiwrYTu/jcpdC0kM3yc14LBro4bsuh/CAmGHeoM6vwtzem8OJ8XWVa8eZ1X5/MqL9gcOBTYUELFJaYuJ6Kz6wFJfqnAdW3ArTNCrcb39djldgK1YYFVniWEPzmuGEc+NUjLE9KAYuC06faI4cBulDwAa6EctiMh+cmKbziwODsLiTVHiZTH4P5ZjtZFuL4EB0jFU+fNmErXWlBuozmM1+ClWx5jMeGmDVJjiYNKTtVa+kZ9iI6QfYPpSyHiLZLgbVAaqI866tu13n6aWF4JNbgyBqWmIPcvcOhd5V3g0xMueYONygbaFh0tW6M3YihGLk26kvhIa6m3ODTsXwo0EE/RWEivEL8c4HswIqh4j22wONKswApaDruK7dAmTnYJsZ1dSrD2IBLdLR99oBglj+LK6E8ooUa07gInb/ioY5f8vPpHW9/3S/zWjrMyT6k36IpLH8c13+1effFZNmcnTuHZdS96H/mp+zhxGX95FMUfjiJ8kWfeRJZl/4/in49C2DKu8qhtGP6CN/EQDiDO3HtNhUVqdwF7N/1rhECHyyXoMbTV5msQdcB23wHBxf9MfwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">5d4c4aaf53235210662972d0a0490efe</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>5f5c0eaf53235210662972d0a0490ee0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K5WfQ5QPYIE3RFVpUrdKbdWXrYpubAesOXYaO1AW8d93nQ9AHWir1se94XO/zj25RzRE17asrXnUC2PESpH5t2ePCOUw/N0QBQUnc0K1YsIKrdIW8MgGZO0C9/yl5sZeLcqy0hvOMMSEKSXsni5n0LWQrOL9tBIq7Gl5RebNm5Bg2CAPIA9nNKRxNI2jIIiScZhN4yyMWAwcYmwoIeMSU5cDzavbFvEu8re70uHGVkKt+vdt3+VhAHXFHKsw8Ah/tVwxZD/PQRrukQIUA6ur3QGpOLA7JY/AWiiL7YhLfjXiJw6MJhOXmHNckfIueHimvXIdnF+DBaRSU1tXfSpda0G56cRhPIda2uUp1iXclW7VrsRCJodqLetCfe0UIYcGw4dCpDZIgpduU0e93yN/WOvt/cDyRqhWlT4oNQV5eIFF7bLaOj4N4ZIX2CgtoCxR0dQdgGiLkUvhryQ+/FzqLQ511+cDdcR9FBb8G8SvW/gJKuG2+IJtsLijmYERNG0vFduhTJzsPWJ2ZinBmOOSqG76UjuK3cr9cmmnjyuhlSjtAidveL/H3vv98E9uvmlYHgLPkmQ0/TSjo/Ek46MsCpPRmCYQRwnqOg59aA8eZGosWL7ff6+DIGZw0Sgf1fZ97prBJJ+EweS8u8bTc+4646t3Wir6g6Xc9/xLRwVB8N9S/2wpYdLOCP1u7fAPdNSzs08386A1FQapPTrs8/CP4wI7PC5BT6Gtrn64pY7Y/hf2YibHuwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d54c8aaf53235210662972d0a0490e25</block>
+        <comment/>
+        <connected_to>b3a78e20-47b0-48cf-a4f6-b3ddcda9482f</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Business Card Approval Flow">cb5c0eaf53235210662972d0a0490e9e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>2641e8b5-ae33-469c-b68e-d18f498cb46d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:36</sys_created_on>
+        <sys_id>db5c0eaf53235210662972d0a0490ee1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:36</sys_updated_on>
+        <ui_id>bae86156-ff87-4770-b21f-ef7eaee1db16</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cb5c0eaf53235210662972d0a0490e9e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_id>1b5c0eaf53235210662972d0a0490eca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cb5c0eaf53235210662972d0a0490e9e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:35</sys_created_on>
+        <sys_id>5b5c0eaf53235210662972d0a0490ec3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Card Request" source="x_1439619_business">b5619e0f53e71e10662972d0a0490eb9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Business Card Request">b5619e0f53e71e10662972d0a0490eb9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cb5c0eaf53235210662972d0a0490e9e"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>f75b111f53e75e10662972d0a0490edd</sys_id>
+        <latest_snapshot>cb5c0eaf53235210662972d0a0490e9e</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f75b111f53e75e10662972d0a0490edd^sys_idNOT IN275c4eaf53235210662972d0a0490e08"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>f75b111f53e75e10662972d0a0490edd</plan_id>
+        <snapshot>cb5c0eaf53235210662972d0a0490e9e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-12 07:30:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>275c4eaf53235210662972d0a0490e08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-12 07:30:37</sys_updated_on>
+        <trigger display_value="">635c4eaf53235210662972d0a0490e06</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f75b111f53e75e10662972d0a0490edd"/>
+</record_update>
