@@ -2,7 +2,7 @@
     <element db_object_id="b6715ec7532b1e10662972d0a0490e86" extends="task" label="Business Card Request" max_length="40" name="x_1439619_business_business_card_request" type="collection">
         <element attributes="encode_utf8=false" default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="Requested by" max_length="32" name="u_reference_1" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_2" type="glide_date_time"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="Quantity" mandatory="true" max_length="40" name="quantity" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="1" label="Quantity" mandatory="true" max_length="40" name="quantity" type="choice">
             <choice>
                 <element inactive_on_update="false" label="3" sequence="2" value="3"/>
                 <element inactive_on_update="false" label="4" sequence="3" value="4"/>
