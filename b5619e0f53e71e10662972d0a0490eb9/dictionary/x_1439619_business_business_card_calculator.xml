@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="83767b0053731610662972d0a0490eaa" label="Business Card Calculator" max_length="40" name="x_1439619_business_business_card_calculator" type="collection">
-        <element choice="1" label="Limit type" max_length="40" name="limit_type" type="choice">
+        <element choice="1" default="yearly" label="Limit type" max_length="40" name="limit_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yearly" value="yearly"/>
             </choice>
