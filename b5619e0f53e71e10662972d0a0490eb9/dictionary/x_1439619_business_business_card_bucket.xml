@@ -2,6 +2,7 @@
     <element db_object_id="79e4b7cc53331610662972d0a0490e2a" label="Business Card Bucket" max_length="40" name="x_1439619_business_business_card_bucket" type="collection">
         <element label="Limit" max_length="40" name="limit" type="float"/>
         <element label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <element label="Original Limit" max_length="40" name="original_limit" type="integer"/>
         <index name="index">
             <element name="employee"/>
         </index>
